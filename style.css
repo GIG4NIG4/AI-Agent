@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --harvest-dark: #0B2E26;
+    --harvest-lime: #C8E664;
+    --harvest-bg: #F4F7F6;
+    --harvest-white: #FFFFFF;
+    --harvest-gray-text: #9CA3AF;
+    --card-radius: 32px;
+}
+
+/* Base Layout */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    background-color: var(--harvest-bg);
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 260px;
+    background-color: var(--harvest-dark);
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+}
+
+.nav-item {
+    display: block;
+    padding: 12px 0;
+    color: var(--harvest-gray-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: white;
+}
+
+/* Card Styling */
+.card {
+    background: var(--harvest-white);
+    border-radius: var(--card-radius);
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.card-title {
+    color: var(--harvest-gray-text);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+/* Button Styling */
+.btn-analyze {
+    background-color: var(--harvest-lime);
+    color: var(--harvest-dark);
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 50px;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-analyze:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(200, 230, 100, 0.3);
+}
+
+/* Health Bar Animation */
+.health-bar-container {
+    background: #f1f5f9;
+    border-radius: 20px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.health-bar-fill {
+    background: linear-gradient(to top, var(--harvest-lime), #e4ff8c);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 20px 20px 0 0;
+    transition: height 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scrollbar rapi */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
